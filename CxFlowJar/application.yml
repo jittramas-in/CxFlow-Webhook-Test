@@ -1,10 +1,17 @@
 server:
   port: 8080
 
-level:
-  com:
-    checkmarx: DEBUG
-#            RestTemplate: TRACE
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{15}){cyan}  [%clr(%X{cx}){blue}] %clr(:){faint} %replace(%m){'([\\|])','\\$1'}%n%wEx"
+    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{15}){cyan}  [%clr(%X{cx}){blue}] %clr(:){faint} %replace(%m){'([\\|])','\\$1'}%n%wEx"
+  file:
+    name: cx-flow.log
+
+  level:
+    com:
+      checkmarx: DEBUG
+  #            RestTemplate: TRACE
 
 cx-flow:
   bug-tracker: GitHub
@@ -19,8 +26,8 @@ checkmarx:
   version: 9.0
   multi-tenant: false
 
-
-
 github:
   webhook-token: c57325dc-c7a9-11ed-afa1-0242ac120002
   token: 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
+
+
