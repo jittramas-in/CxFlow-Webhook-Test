@@ -13,11 +13,12 @@ cx-flow:
 
 checkmarx:
   username: admin@cx
-  password: pT62N$@t!J
+  password: H#c2iN36M!
   base-url: http://localhost
   team: /CxServer
   version: 9.0
   multi-tenant: false
+
 
 
 github:
