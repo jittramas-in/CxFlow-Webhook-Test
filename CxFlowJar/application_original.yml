@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+level:
+  com:
+    checkmarx: DEBUG
+#            RestTemplate: TRACE
+
+cx-flow:
+  bug-tracker: GitHub
+  branches:
+    - main
+
+checkmarx:
+  username: admin@cx
+  password: H#c2iN36M!
+  base-url: http://localhost
+  team: /CxServer
+  version: 9.0
+  multi-tenant: false
+
+
+github:
+  webhook-token: 6f44455b-3196-47e0-a9ab-546e403a0e3c
+  token: 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
